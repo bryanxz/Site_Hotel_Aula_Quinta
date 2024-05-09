@@ -1,0 +1,123 @@
+.Ground 
+{
+    position: fixed;
+    background-color:grey;
+    height:100%;
+    width: 100%;
+
+}
+h3
+{
+    display: flex;
+    width: 100%;  
+    font-size: 30px;
+    text-align: center;
+}
+
+
+#NomeField
+{
+    
+    width: 100%;  
+    display: flex;
+    
+}
+
+#GenderField
+{   
+    display: flex;
+    width: 100%;        
+}
+
+#EmailField
+{
+    display: flex;
+    width: 100%;          
+}
+
+#ScheduleField
+{
+    display: flex;   
+    width: 100%;  
+    align-items: center;      
+}
+
+#NightsField
+{
+ 
+    
+    display: flex;
+    width: 100%;         
+}
+
+#GuestsField
+{
+ 
+    
+    display: flex;
+    width: 100%;  
+    
+        
+}
+
+#AmountField
+{
+ 
+    display: flex;
+    
+    width: 100%; 
+    
+         
+}
+#MessageField
+{
+ 
+    
+    display: flex;
+    width: 100%;  
+    
+    align-items: center;      
+}
+#Submitbtn
+{
+    width: 150px;
+    color: white;
+   
+}
+label 
+{
+    font-weight: bold;
+    margin-right: 10px;  
+}
+
+.Fieldbox 
+{
+
+    
+    width: 400px;
+    
+    align-items: left;
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: top;
+    
+}
+
+.MainDiv
+{
+    color: black;
+    background-color:whitesmoke;
+    width: 500px;
+    height: auto;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form
+{
+    width: 100px;
+}
