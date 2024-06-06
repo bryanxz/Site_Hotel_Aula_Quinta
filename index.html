@@ -59,7 +59,7 @@
 
         <div class="input-group-sm" id="NightsField">  
             <label class="form-label" style="width: 800px">Total de dias de hospedagem</label>
-            <input oninput="Alterar(this, this.id)" id="noites" class="form-control" type="number" name="number" min="0" max="100" value="0">
+            <input oninput="Alterar(this, this.id); calcularEstadia(this.value)" id="noites" class="form-control" type="number" name="number" min="0" max="100" value="0">
         </div>
 
         <div class="input-group-sm" id="GuestsField">  
@@ -79,6 +79,11 @@
             <label class="form-label">Clique aqui para receber nossa Newsletter</label>
         </div>
 
+        <div id="estadiaValue" style="display: none;">
+            <label class="form-label">Valor da Estadia:</label>
+            <span id="valorEstadia"></span>
+        </div>
+
         <div>
             <button onclick=Enviar() type="button" id="Submitbtn" class="btn btn-lg start-50 translate-middle-x btn-dark">Enviar</button>
         </div>
@@ -96,6 +101,14 @@ function formatarCPF(campo) {
     cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
     campo.value = cpf;
 }
+
+function calcularEstadia(dias) {
+    var valorDiaria = 50; 
+    var totalEstadia = dias * valorDiaria;
+    document.getElementById("estadiaValue").style.display = "block";
+    document.getElementById("valorEstadia").innerText = "R$ " + totalEstadia.toFixed(2);
+}
 </script>
+
 </body>
 </html>
