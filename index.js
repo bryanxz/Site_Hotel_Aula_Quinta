@@ -132,4 +132,11 @@ function Toggle(selfinput, condition)
         selfinput.classList.remove("is-invalid");
     }
 }
-
+//funcao que formata o cpf 
+function formatarCPF(campo) {
+    var cpf = campo.value.replace(/\D/g, ''); 
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    campo.value = cpf;
+}

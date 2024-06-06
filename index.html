@@ -21,81 +21,81 @@
    <div class="Ground">
     <div class="MainDiv position-absolute start-50 top-50 translate-middle">
 
-    <h3 class=" Fieldbox
-    start-50 input-group 
-    translate-middle-x
-    " >Hotel ABC - Faça sua reserva:</h3>
+    <h3 class="Fieldbox start-50 input-group translate-middle-x">Hotel ABC - Faça sua reserva:</h3>
 
-    <div class="Fieldbox start-50 input-group 
-    translate-middle-x ">
-    <div class=" input-group-sm " id="NomeField">
-        <label class="form-label " >Nome: </label>     
-        <input oninput="Alterar(this, this.id)" id="nome" class="form-control" placeholder="Digite um nome válido:">     
-    </div>
-    
-    <div class="input-group-sm " id="EmailField">
-        <label class="form-label" style="width: 150px">Email: </label>
-        <input oninput="Alterar(this, this.id)" id="email" class="form-control" placeholder="Digite um email válido:">
-    
-    </div>
-
-    <div class="input-group-sm " id="GenderField">
-        <label class="form-label" style="width: 500px">Gênero: </label>
-        <select onchange="Alterar(this,this.id)" class="form-select" id="gender">
-            <option selected id="default">Gênero</option>
-            <option>Feminino</option>
-            <option>Masculino</option>
-            <option>Prefiro não responder</option>
-        </select>
-
-    </div>
-
-   
-
-    <div class="input-group-sm " id="ScheduleField">
-        <label class="form-label" style="width: 300px">Dia de chegada: </label>
-        <fieldset>
-            <input oninput="Alterar(this, this.id)" class="form-control" id="chegada" type="date" name="" value="" min="">
-        </fieldset>
-         
+    <div class="Fieldbox start-50 input-group translate-middle-x">
+        <div class="input-group-sm" id="NomeField">
+            <label class="form-label">Nome:</label>     
+            <input oninput="Alterar(this, this.id)" id="nome" class="form-control" placeholder="Digite um nome válido:">     
+        </div>
         
+        <div class="input-group-sm" id="EmailField">
+            <label class="form-label" style="width: 150px">Email:</label>
+            <input oninput="Alterar(this, this.id)" id="email" class="form-control" placeholder="Digite um email válido:">
+        
+        </div>
+
+        <div class="input-group-sm" id="CPFField">
+            <label class="form-label" style="width: 150px">CPF:</label>
+            <input oninput="formatarCPF(this)" class="form-control" placeholder="Digite um CPF válido:" maxlength="14">
+        </div>
+
+        <div class="input-group-sm" id="GenderField">
+            <label class="form-label" style="width: 500px">Gênero:</label>
+            <select onchange="Alterar(this,this.id)" class="form-select" id="gender">
+                <option selected id="default">Gênero</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Prefiro não responder</option>
+            </select>
+        </div>
+
+        <div class="input-group-sm" id="ScheduleField">
+            <label class="form-label" style="width: 300px">Dia de chegada:</label>
+            <fieldset>
+                <input oninput="Alterar(this, this.id)" class="form-control" id="chegada" type="date" name="" value="" min="">
+            </fieldset>
+        </div>
+
+        <div class="input-group-sm" id="NightsField">  
+            <label class="form-label" style="width: 800px">Total de dias de hospedagem</label>
+            <input oninput="Alterar(this, this.id)" id="noites" class="form-control" type="number" name="number" min="0" max="100" value="0">
+        </div>
+
+        <div class="input-group-sm" id="GuestsField">  
+            <label class="form-label"style="width: 800px">Número de Hospedes:</label>
+            <input oninput="Alterar(this, this.id)" id="hospedes" class="form-control" type="number" name="number" min="0" max="10" value="0">
+        </div>
+
+        <div class="input-group-sm" id="MessageField"> 
+            <label class="floatTextarea">Mensagem:</label>
+            <div class="form-floating" style="width: 600px">
+                <textarea class="form-control" id="formtextarea" style="height: 100%;" placeholder="Digite:"></textarea>
+            </div>     
+        </div>
+
+        <div id="cb1">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-label">Clique aqui para receber nossa Newsletter</label>
+        </div>
+
+        <div>
+            <button onclick=Enviar() type="button" id="Submitbtn" class="btn btn-lg start-50 translate-middle-x btn-dark">Enviar</button>
+        </div>
+
     </div>
-
-    <div class="input-group-sm " id="NightsField">  
-
-        <label class="form-label" style="width: 800px">Total de dias de hospedagem</label>
-        <input oninput="Alterar(this, this.id)" id="noites" class="form-control" type="number" name="number" min="0" max="100" value="0">
-      
-    </div>
-
-    <div class="input-group-sm " id="GuestsField">  
-
-        <label class="form-label"style="width: 800px">Número de Hospedes:</label>
-        <input oninput="Alterar(this, this.id)" id="hospedes" class="form-control" type="number" name="number" min="0" max="10" value="0">
-      
-    </div>
-
-    
-
-    <div class="input-group-sm " id="MessageField"> 
-    <label class="floatTextarea">Mensagem:</label>
-        <div class="form-floating" style="width: 600px">
-            <textarea class="form-control" id="formtextarea" style="height: 100%;" placeholder="Digite:"></textarea>
-        </div>     
-    </div>
-
-    <div  id="cb1">
-        <input class="form-check-input" type="checkbox">
-        <label class="form-label">Clique aqui para receber nossa Newsletter</label>
-    </div>
-
-
-    <div>
-        <button onclick=Enviar() type="button" id="Submitbtn" class="btn btn-lg start-50 translate-middle-x btn-dark">Enviar</button>
-    </div>
-
-</div>
 </div>
 <script src="index.js"></script>
+
+<script>
+function formatarCPF(campo) {
+    var cpf = campo.value.replace(/\D/g, ''); 
+    cpf = cpf.substring(0, 11); // Limita o CPF a 11 caracteres
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    campo.value = cpf;
+}
+</script>
 </body>
-</html> 
+</html>
